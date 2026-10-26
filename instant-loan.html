@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Bank of India | Instant Loan</title>
+<link rel="stylesheet" href="style css.css">
+</head>
+<body data-page="instant-loan">
+<header>
+<nav class="navbar">
+  <a href="Project Apexx.html" class="logo"><span>AB</span> Apex Bank of India</a>
+  <button class="menu-btn" data-action="toggle-menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="Project Apexx.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a class="active" href="instant-loan.html">Instant Loan</a></li>
+    <li><a href="login.html">Login / Register</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+<main>
+<section class="page-banner">
+  <p class="small-title">INSTANT LOAN OPTIONS</p><h1>Quick Loan Solutions</h1><p>Choose a demo loan option and submit an application in a few steps.</p>
+</section>
+<section class="loan-options section">
+  <div class="loan-option-card"><div class="service-icon">⚡</div><h3>Instant Personal Loan</h3><p>For education, medical, travel and personal needs.</p><strong>Up to ₹5,00,000</strong></div>
+  <div class="loan-option-card"><div class="service-icon">📱</div><h3>Digital Emergency Loan</h3><p>Designed for short-term emergency requirements.</p><strong>Up to ₹2,00,000</strong></div>
+  <div class="loan-option-card"><div class="service-icon">💼</div><h3>Business Quick Loan</h3><p>Demo financing option for small business needs.</p><strong>Up to ₹10,00,000</strong></div>
+</section>
+<section class="loan-application-wrap">
+  <div class="loan-application-card">
+    <p class="small-title">APPLY NOW</p><h2>Instant Loan Application</h2>
+    <form data-form-action="instant-loan">
+      <label>Full Name</label><input id="loanName" type="text" placeholder="Login required" readonly required>
+      <label>Phone Number</label><input id="loanPhone" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="Login required" readonly required>
+      <label>Loan Type</label><select id="loanType" required><option value="">Select loan type</option><option>Instant Personal Loan</option><option>Digital Emergency Loan</option><option>Business Quick Loan</option></select>
+      <label>Loan Amount (₹)</label><input id="loanApplyAmount" type="number" min="10000" max="1000000" placeholder="Example: 200000" required>
+      <label>Tenure (Months)</label><select id="loanTenure" required><option value="">Select tenure</option><option value="6">6</option><option value="12">12</option><option value="24">24</option><option value="36">36</option><option value="48">48</option><option value="60">60</option></select>
+      <button class="primary-btn" type="submit">Submit Loan Application</button>
+    </form>
+    <p class="admin-note">This is an educational project. No real loan is approved or disbursed.</p>
+  </div>
+</section>
+</main>
+<div id="bankModal" class="bank-modal" aria-hidden="true">
+  <div class="bank-modal-content">
+    <button class="modal-close" data-action="close-modal">×</button>
+    <div id="modalIcon" class="modal-icon">✓</div>
+    <h2 id="modalTitle">Apex Bank</h2><p id="modalMessage"></p><button class="primary-btn modal-btn" data-action="close-modal">Continue</button>
+  </div>
+</div>
+<footer>
+  <div class="footer-content">
+    <div>
+      <h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p>
+    </div>
+    <div><h3>Quick Links</h3>
+      <a href="Project Apexx.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="instant-loan.html">Instant Loan</a>
+      <a href="login.html">Login / Register</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Contact Support</h3><p>Email: support@apexbank.com</p><p>Phone: +91 77357 87664</p><p>Branch: Bhubaneswar, Odisha</p>
+    </div>
+  </div>
+  <div class="copyright"><p>© 2026 Apex Bank of India. BCA Web Development Project.</p></div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>

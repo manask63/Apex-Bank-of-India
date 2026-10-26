@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apex Bank | KYC</title>
+        <link rel="stylesheet" href="style css.css">
+    </head>
+<body>
+    <header>
+        <nav class="navbar"><a href="Project Apexx.html" class="logo"><span>AB</span> Apex Bank of India</a>
+            <button class="menu-btn" data-action="toggle-menu"></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section class="page-banner">
+        <p class="small-title">ACCOUNT KYC</p>
+        <h1>Complete Your KYC</h1>
+        <p>Submit demo KYC information for your Apex Bank account.</p>
+    </section><section class="account-opening-wrap">
+        <div class="account-opening-card">
+            <form data-form-action="kyc">
+            <label>Full Name</label>
+            <input id="kycName" type="text" required><label>Document Type</label>
+            <select id="kycDocType" required>
+                <option value="">Select document</option>
+                <option>Aadhaar Card (Demo)</option>
+                <option>PAN Card (Demo)</option>
+                <option>Passport (Demo)</option>
+                <option>Driving Licence (Demo)</option>
+            </select>
+            <label>Document Reference</label>
+            <input id="kycDocRef" type="text" placeholder="Enter demo reference number" required>
+            <label>Date of Birth</label>
+            <input id="kycDob" type="date" required><button class="primary-btn" type="submit">Submit KYC</button>
+            <p class="form-note">Use dummy/demo information for this college project. Do not enter real identity documents.</p>
+        </form>
+        </div>
+    </section>
+</main>
+<div id="bankModal" class="bank-modal"><div class="bank-modal-content"><button class="modal-close" data-action="close-modal">×</button><div id="modalIcon" class="modal-icon">✓</div><h2 id="modalTitle">Apex Bank</h2><p id="modalMessage"></p><button class="primary-btn modal-btn" data-action="close-modal">Continue</button></div></div>
+<footer>
+    <div class="footer-content"><div><h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p></div><div><h3>Quick Links</h3><a href="Project Apexx.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="login.html">Login / Register</a><a href="contact.html">Contact</a></div><div><h3>Contact Support</h3><p>Email: support@apexbank.com</p><p>Phone: +91 77357 87664</p><p>Branch: Bhubaneswar, Odisha</p></div></div><div class="copyright"><p>© 2026 Apex Bank of India. BCA Web Development Project.</p></div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>

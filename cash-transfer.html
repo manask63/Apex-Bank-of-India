@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apex Bank | Cash Transfer</title>
+        <link rel="stylesheet" href="style css.css">
+    </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="Project Apexx.html" class="logo"><span>AB</span> Apex Bank of India</a>
+            <button class="menu-btn" data-action="toggle-menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="instant-loan.html">Instant Loan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section class="page-banner"><p class="small-title">CASH TRANSFER</p><h1>Transfer Money</h1><p>Send a demo transfer to another account.</p>
+    </section>
+    <section class="account-opening-wrap">
+        <div class="account-opening-card">
+            <form data-form-action="cash-transfer">
+                <label>Beneficiary Name</label>
+                <input id="beneficiaryName" type="text" required>
+                <label>Beneficiary Account Number</label>
+                <input id="beneficiaryAccount" type="text" minlength="8" required>
+                <label>Transfer Mode</label>
+                <select id="transferMode" required>
+                    <option value="">Select mode</option>
+                    <option>IMPS</option>
+                    <option>NEFT</option>
+                    <option>RTGS</option>
+                    <option>UPI</option>
+                </select>
+                <label>Amount (₹)</label>
+                <input id="transferAmount" type="number" min="1" required>
+                <label>Remarks</label>
+                <input id="transferRemarks" type="text" placeholder="Optional">
+                <button class="primary-btn" type="submit">Submit Transfer</button>
+                <p class="form-note">Demo only — no real money is transferred.</p>
+            </form>
+        </div>
+    </section>
+</main>
+<div id="bankModal" class="bank-modal">
+    <div class="bank-modal-content">
+        <button class="modal-close" data-action="close-modal">×</button>
+        <div id="modalIcon" class="modal-icon">✓</div>
+        <h2 id="modalTitle">Apex Bank</h2><p id="modalMessage"></p>
+        <button class="primary-btn modal-btn" data-action="close-modal">Continue</button>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div>
+            <h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <a href="Project Apexx.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="login.html">Login / Register</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div>
+            <h3>Contact Support</h3>
+            <p>Email: support@apexbank.com</p>
+            <p>Phone: +91 77357 87664</p>
+            <p>Branch: Bhubaneswar, Odisha</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Apex Bank of India. BCA Web Development Project.</p>
+    </div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>

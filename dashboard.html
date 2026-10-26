@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Bank of India - Dashboard</title>
+<link rel="stylesheet" href="style css.css">
+</head>
+<body data-page="dashboard" class="dashboard-page">
+<header><nav class="navbar">
+  <div class="logo">APEX BANK OF INDIA</div>
+  <button class="menu-toggle" data-action="toggle-menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="user-home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li id="openAccountNav"><a href="account-opening.html">Open Account</a></li><li><a class="active" href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav></header>
+
+<main class="dashboard-container">
+  <section class="dashboard-welcome"><div><p class="eyebrow">DIGITAL BANKING</p><h1>Welcome, <span id="dashName">Customer</span> 👋</h1><p>Your Apex Bank account overview</p></div><button class="logout-btn" data-action="logout">Logout</button></section>
+
+  <section class="dashboard-grid">
+    <div class="dashboard-card balance-card"><p>Available Balance</p><h2>₹<span id="balance">0.00</span></h2><small>Demo balance — updated after recorded transactions</small></div>
+    <div class="dashboard-card"><p>Account Holder</p><h2 id="accountName">—</h2><small id="accountEmail">—</small></div>
+    <div class="dashboard-card"><p>Account Number</p><h2 id="accountNumber">—</h2><small id="accountTypeLabel">Account type not selected</small></div>
+  </section>
+
+  <section class="dashboard-panel">
+    <div class="panel-head"><h2>Recent Transactions</h2><a class="secondary-btn" href="statement.html">View Full Statement</a></div>
+    <div class="transactions" id="recentTransactions"><p>No transactions recorded yet.</p></div>
+  </section>
+
+  <section class="dashboard-panel">
+    <div class="panel-head"><h2>Account & Banking Services</h2></div>
+    <div id="accountStatusBox" class="dashboard-card" style="margin-bottom:18px">Checking account status...</div>
+    <div class="quick-actions">
+      <button id="openAccountAction" data-nav="account-opening.html">🏦 Open Account</button>
+      <button data-nav="kyc.html">🪪 Complete KYC</button>
+      <button data-nav="cash-transfer.html">💸 Cash Transfer</button>
+      <button data-nav="instant-loan.html">⚡ Apply for Loan</button>
+      <button data-nav="statement.html">📄 Account Statement</button>
+      <button data-action="dashboard-profile">👤 Profile</button>
+    </div>
+  </section>
+</main>
+
+<div id="bankModal" class="bank-modal">
+  <div class="bank-modal-content">
+    <button class="modal-close" data-action="close-modal">×</button>
+    <div id="modalIcon" class="modal-icon">✓</div>
+    <h2 id="modalTitle">Information</h2><p id="modalMessage"></p>
+    <button class="primary-btn modal-btn" data-action="close-modal">OK</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div><h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p></div>
+    <div><h3>Quick Links</h3>
+      <a href="Project Apexx.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="instant-loan.html">Instant Loan</a>
+      <a href="login.html">Login / Register</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Contact Support</h3><p>Email: support@apexbank.com</p><p>Phone: +91 77357 87664</p><p>Branch: Bhubaneswar, Odisha</p>
+    </div>
+  </div>
+  <div class="copyright"><p>© 2026 Apex Bank of India. BCA Web Development Project.</p></div>
+</footer>
+<script src="jsscript.js"></script>
+</body></html>

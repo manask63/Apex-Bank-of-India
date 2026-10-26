@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Bank of India - Login / Register</title>
+  <link rel="stylesheet" href="style css.css">
+</head>
+<body class="auth-page">
+<header>
+  <nav class="navbar">
+    <a href="Project Apexx.html" class="logo"><span>AB</span> Apex Bank of India</a>
+    <button class="menu-btn" data-action="toggle-menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Project Apexx.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="instant-loan.html">Instant Loan</a></li>
+      <li><a class="active" href="login.html">Login / Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="auth-container">
+  <div class="auth-card">
+    <div class="auth-brand"><div class="bank-mark">A</div><div><h1>Apex Bank of India</h1><p>Secure Digital Banking</p></div></div>
+    <div class="auth-tabs">
+      <button id="loginTab" class="auth-tab active" data-action="login-tab">Login</button>
+      <button id="registerTab" class="auth-tab" data-action="register-tab">Register</button>
+    </div>
+
+    <form id="loginForm" data-form-action="login">
+      <h2>Welcome Back</h2><p class="form-subtitle">Login to access your banking dashboard.</p>
+      <label>Email / Username</label><input id="loginUser" type="text" placeholder="Enter email or username" required>
+      <label>Password</label><input id="loginPassword" type="password" placeholder="Enter password" required>
+      <div class="auth-row"><label class="remember-label"><input id="rememberMe" type="checkbox"> Remember me</label><a href="#" data-action="forgot-password">Forgot Password?</a></div>
+      <button class="primary-btn" type="submit">Login Securely</button>
+      <p class="switch-text">New customer? <a href="#" data-action="register-tab">Create an account</a></p>
+    </form>
+
+    <form id="registerForm" style="display:none" data-form-action="register">
+      <h2>Create Your Account</h2><p class="form-subtitle">Register a demo account for this college project.</p>
+      <label>Full Name</label><input id="regName" type="text" placeholder="Enter full name" required>
+      <label>Email</label><input id="regEmail" type="email" placeholder="Enter email" required>
+      <label>Phone</label><input id="regPhone" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="Enter exactly 10 digits" required>
+      <label>Username</label><input id="regUsername" type="text" placeholder="Choose username" required>
+      <label>Password</label><input id="regPassword" type="password" minlength="8" placeholder="Min. 8 chars + 1 special character" required>
+      <small class="field-hint">Password must contain at least 8 characters and one special character (for example: @, #, $, !).</small>
+      <label>Confirm Password</label><input id="regConfirmPassword" type="password" minlength="8" placeholder="Re-enter password" required>
+      <button class="primary-btn" type="submit">Create Account</button>
+      <p class="switch-text">Already registered? <a href="#" data-action="login-tab">Login</a></p>
+    </form>
+
+    <form id="forgotForm" style="display:none" data-form-action="forgot-password">
+      <h2>Reset Password</h2><p class="form-subtitle">For this demo, verify your registered email and 10-digit phone number.</p>
+      <label>Email</label><input id="forgotEmail" type="email" placeholder="Registered email" required>
+      <label>Phone</label><input id="forgotPhone" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="Exactly 10 digits" required>
+      <label>New Password</label><input id="forgotPassword" type="password" minlength="8" placeholder="Min. 8 chars + 1 special character" required>
+      <small class="field-hint">Use at least 8 characters and include one special character.</small>
+      <label>Confirm New Password</label><input id="forgotConfirmPassword" type="password" minlength="8" required>
+      <button class="primary-btn" type="submit">Reset Password</button>
+      <p class="switch-text"><a href="#" data-action="login-tab">Back to Login</a></p>
+    </form>
+  </div>
+</main>
+
+<div id="bankModal" class="bank-modal" aria-hidden="true"><div class="bank-modal-content"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><div id="modalIcon" class="modal-icon">✓</div><h2 id="modalTitle">Success</h2><p id="modalMessage">Done.</p><button class="primary-btn modal-btn" data-action="close-modal">Continue</button></div></div>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h2>Apex Bank of India</h2>
+            <p>Banking Made Simple, Secure & Smart.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="Project Apexx.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="instant-loan.html">Instant Loan</a>
+            <a href="login.html">Login / Register</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+
+        <div>
+            <h3>Contact Support</h3>
+            <p>Email: support@apexbank.com</p>
+            <p>Phone: +91 77357 87664</p>
+            <p>Branch: Bhubaneswar, Odisha</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 Apex Bank of India. BCA Web Development Project.</p>
+    </div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>

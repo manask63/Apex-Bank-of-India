@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Bank | User Home</title>
+<link rel="stylesheet" href="style css.css">
+</head>
+<body data-page="user-home" class="dashboard-page user-home-page">
+<header>
+<nav class="navbar">
+  <a href="user-home.html" class="logo"><span>AB</span> Apex Bank of India</a>
+  <button class="menu-btn" data-action="toggle-menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a class="active" href="user-home.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li id="accountNavItem"><a href="account-opening.html">Open Account</a></li>
+    <li><a href="kyc.html">KYC</a></li>
+    <li><a href="cash-transfer.html">Transfer</a></li>
+    <li><a href="statement.html">Statement</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main class="dashboard-container">
+  <section class="dashboard-welcome user-home-hero">
+    <div>
+      <p class="eyebrow">APEX DIGITAL BANKING</p>
+      <h1>Welcome, <span id="userHomeName">Customer</span> 👋</h1>
+      <p>Your personal banking home. Manage your account, transfer funds, view statements and access eligible loan options.</p>
+    </div>
+    <button class="logout-btn" data-action="logout">Logout</button>
+  </section>
+
+  <section class="dashboard-grid">
+    <div class="dashboard-card balance-card">
+      <p>Available Balance</p>
+      <h2>₹<span id="userHomeBalance">0.00</span></h2>
+      <small>Current demo account balance</small>
+    </div>
+    <div class="dashboard-card">
+      <p>Account Number</p>
+      <h2 id="userHomeAccount">—</h2>
+      <small id="userHomeAccountType">Account type not selected</small>
+    </div>
+    <div class="dashboard-card">
+      <p>KYC Status</p>
+      <h2 id="userHomeKyc">Pending</h2>
+      <small id="userHomeCard">Card not selected</small>
+    </div>
+  </section>
+
+  <section class="dashboard-panel" id="userLoanStatusPanel"><div class="panel-head"><h2>Loan Status</h2></div><p id="userLoanStatus">No loan application yet.</p></section>
+
+  <section class="user-home-loan-banner">
+    <div>
+      <p class="small-title">EMERGENCY FINANCE</p>
+      <h2>Emergency Loan up to ₹20,000</h2>
+      <p>Need quick financial support? Eligible logged-in users can submit a demo emergency-loan request up to ₹20,000.</p>
+    </div>
+    <div class="loan-limit-badge">UP TO<br><strong>₹20,000</strong></div>
+  </section>
+
+  <section class="account-opening-wrap user-home-loan-wrap">
+    <div class="account-opening-card">
+      <p class="small-title">QUICK APPLICATION</p>
+      <h2>Apply for Emergency Loan</h2>
+      <form data-form-action="emergency-loan">
+        <label>Loan Amount (₹)</label>
+        <input id="emergencyLoanAmount" type="number" min="1000" max="20000" step="500" placeholder="Enter amount up to ₹20,000" required>
+        <label>Tenure</label>
+        <select id="emergencyLoanTenure" required>
+          <option value="">Select tenure</option>
+          <option value="3">3 Months</option>
+          <option value="6">6 Months</option>
+          <option value="9">9 Months</option>
+          <option value="12">12 Months</option>
+        </select>
+        <label>Purpose</label>
+        <select id="emergencyLoanPurpose" required>
+          <option value="">Select purpose</option>
+          <option>Medical Emergency</option>
+          <option>Education Need</option>
+          <option>Family Emergency</option>
+          <option>Urgent Personal Expense</option>
+        </select>
+        <button class="primary-btn" type="submit">Apply for Emergency Loan</button>
+        <p class="form-note">Demo only — no real loan is approved or disbursed.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="dashboard-panel">
+    <div class="panel-head"><h2>Quick Banking</h2></div>
+    <div class="quick-actions">
+      <button data-nav="dashboard.html">📊 Dashboard</button>
+      <button id="manageAccountAction" data-nav="account-opening.html">🏦 Open Account</button>
+      <button data-nav="kyc.html">🪪 Complete KYC</button>
+      <button data-nav="cash-transfer.html">💸 Cash Transfer</button>
+      <button data-nav="statement.html">📄 Account Statement</button>
+      <button data-nav="instant-loan.html">⚡ Other Loans</button>
+    </div>
+  </section>
+</main>
+
+<div id="bankModal" class="bank-modal" aria-hidden="true">
+  <div class="bank-modal-content">
+    <button class="modal-close" data-action="close-modal">×</button>
+    <div id="modalIcon" class="modal-icon">✓</div>
+    <h2 id="modalTitle">Apex Bank</h2>
+    <p id="modalMessage"></p>
+    <button class="primary-btn modal-btn" data-action="close-modal">Continue</button>
+  </div>
+</div>
+
+<footer>
+<div class="footer-content">
+  <div><h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p></div>
+  <div><h3>Quick Links</h3><a href="user-home.html">Home</a><a href="dashboard.html">Dashboard</a><a id="footerAccountLink" href="account-opening.html">Open Account</a><a href="services.html">Services</a><a href="statement.html">Statement</a><a href="contact.html">Contact</a></div>
+  <div><h3>Contact Support</h3><p>Email: support@apexbank.com</p><p>Phone: +91 77357 87664</p><p>Branch: Bhubaneswar, Odisha</p></div>
+</div>
+<div class="copyright"><p>© 2026 Apex Bank of India. BCA Web Development Project.</p></div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>

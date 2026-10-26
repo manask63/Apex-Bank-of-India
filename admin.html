@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Bank of India | Admin Portal</title>
+<link rel="stylesheet" href="style css.css">
+</head>
+<body data-page="admin" class="dashboard-page">
+<header>
+<nav class="navbar">
+  <a href="Project Apexx.html" class="logo"><span>AB</span> Apex Bank of India</a>
+  <button class="menu-btn" data-action="toggle-menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="Project Apexx.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="login.html">Login / Register</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main class="admin-container">
+  <section id="adminLoginPanel" class="admin-login-card">
+    <p class="small-title">ADMIN PORTAL</p>
+    <h1>Administrator Login</h1>
+    <p class="form-subtitle">Manage customers, accounts, KYC, transfers and instant-loan applications.</p>
+    <form data-form-action="admin-login">
+      <label>Admin Username</label>
+      <input id="adminUser" type="text" placeholder="Enter admin username" required>
+      <label>Admin Password</label>
+      <input id="adminPassword" type="password" placeholder="Enter admin password" required>
+      <button class="primary-btn" type="submit">Login as Admin</button>
+    </form>
+    <p class="admin-note"><strong>College demo credentials:</strong> admin / Admin@123</p>
+  </section>
+
+  <section id="adminPanel" style="display:none">
+    <div class="admin-heading">
+      <div><p class="small-title">ADMIN DASHBOARD</p><h1>Apex Bank Management</h1></div>
+      <button class="logout-btn" data-action="admin-logout">Logout</button>
+    </div>
+
+    <div class="admin-stats">
+      <div class="dashboard-card"><p>Total Customers</p><h2 id="adminUserCount">0</h2></div>
+      <div class="dashboard-card"><p>Accounts Opened</p><h2 id="adminAccountCount">0</h2></div>
+      <div class="dashboard-card"><p>KYC Requests</p><h2 id="adminKycCount">0</h2></div>
+      <div class="dashboard-card"><p>Transfers</p><h2 id="adminTransferCount">0</h2></div>
+      <div class="dashboard-card"><p>Loan Applications</p><h2 id="adminLoanCount">0</h2></div>
+      <div class="dashboard-card"><p>Pending Loans</p><h2 id="adminPendingLoans">0</h2></div>
+    </div>
+
+    <section class="dashboard-panel">
+      <div class="panel-head"><h2>Registered Customers</h2><button class="secondary-btn" data-action="admin-refresh">Refresh</button></div>
+      <div class="table-wrap">
+        <table class="registration-table">
+          <thead><tr><th>#</th><th>Account No.</th><th>Name</th><th>Account Type</th><th>Card</th><th>KYC</th><th>Email</th><th>Phone</th><th>Registered</th></tr></thead>
+          <tbody id="adminUsersBody"></tbody>
+        </table>
+      </div>
+      <div id="adminUsersEmpty" class="empty-state" style="display:none">No customers registered yet.</div>
+    </section>
+
+
+    <section class="dashboard-panel">
+      <div class="panel-head"><h2>KYC Applications</h2><button class="secondary-btn" data-action="admin-refresh">Refresh</button></div>
+      <div class="table-wrap"><table class="registration-table"><thead><tr><th>#</th><th>Account No.</th><th>Name</th><th>Document</th><th>Reference</th><th>DOB</th><th>Status</th><th>Submitted</th></tr></thead><tbody id="adminKycBody"></tbody></table></div>
+      <div id="adminKycEmpty" class="empty-state" style="display:none">No KYC applications yet.</div>
+    </section>
+
+    <section class="dashboard-panel">
+      <div class="panel-head"><h2>Cash Transfer Requests</h2><button class="secondary-btn" data-action="admin-refresh">Refresh</button></div>
+      <div class="table-wrap"><table class="registration-table"><thead><tr><th>#</th><th>Sender</th><th>Beneficiary</th><th>Mode</th><th>Amount</th><th>Status</th><th>Time</th></tr></thead><tbody id="adminTransfersBody"></tbody></table></div>
+      <div id="adminTransfersEmpty" class="empty-state" style="display:none">No transfer requests yet.</div>
+    </section>
+
+    <section class="dashboard-panel">
+      <div class="panel-head"><h2>Instant Loan Applications</h2><button class="secondary-btn" data-action="admin-refresh">Refresh</button></div>
+      <div class="table-wrap">
+        <table class="registration-table">
+          <thead><tr><th>#</th><th>Account No.</th><th>Applicant</th><th>Phone</th><th>Loan Type</th><th>Amount</th><th>Tenure</th><th>Status</th><th>Applied</th><th>Action</th></tr></thead>
+          <tbody id="adminLoansBody"></tbody>
+        </table>
+      </div>
+      <div id="adminLoansEmpty" class="empty-state" style="display:none">No loan applications yet.</div>
+    </section>
+  </section>
+</main>
+
+<div id="bankModal" class="bank-modal" aria-hidden="true">
+  <div class="bank-modal-content">
+    <button class="modal-close" data-action="close-modal" aria-label="Close">×</button>
+    <div id="modalIcon" class="modal-icon">✓</div>
+    <h2 id="modalTitle">Apex Bank</h2>
+    <p id="modalMessage"></p>
+    <button class="primary-btn modal-btn" data-action="close-modal">Continue</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div><h2>Apex Bank of India</h2><p>Banking Made Simple, Secure & Smart.</p></div>
+    <div><h3>Quick Links</h3><a href="Project Apexx.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="login.html">Login / Register</a><a href="contact.html">Contact</a><a href="admin.html">Admin Portal</a></div>
+    <div><h3>Contact Support</h3><p>Email: support@apexbank.com</p><p>Phone: +91 77357 87664</p><p>Branch: Bhubaneswar, Odisha</p></div>
+  </div>
+  <div class="copyright"><p>© 2026 Apex Bank of India. BCA Web Development Project.</p></div>
+</footer>
+<script src="jsscript.js"></script>
+</body>
+</html>
